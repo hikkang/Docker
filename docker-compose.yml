@@ -1,0 +1,17 @@
+version: '3'
+services:
+  dev_env:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+       UID: '${UID}'
+       GID: '${GID}'
+       USER: '${USER}'
+       USER_GROUP_NAME: '${USER_GROUP_NAME}'
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/home/${USER}/app
+    entrypoint:
+     - bash
