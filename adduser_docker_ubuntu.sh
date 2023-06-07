@@ -1,15 +1,21 @@
 #!/bin/bash
 
 if [ -z ${PUB_KEY} ]
+then
 	echo "You did not provided public key ${PUB_KEY} paired with the private key created in AWS"
+	exit 1
 fi
 
 if [ -z ${USER} ]
-	echo "${USER} is not provided"
+then
+	echo "The USER env var is not provided"
+	exit 1
 fi
 
 if [ -z ${PASSWD} ]
-	echo "${PASSWD} is not provided"
+then
+	echo "The PASSWD env var  is not provided"
+	exit 1
 fi
 
 	
