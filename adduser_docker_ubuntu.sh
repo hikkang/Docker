@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 if [ -z "${PUB_KEY}" ];
 then
