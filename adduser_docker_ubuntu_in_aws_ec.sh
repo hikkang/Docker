@@ -54,10 +54,10 @@ docker --version
 docker compose version
 
 # 키 설정
-
-sudo mkdir /home/${USER}/.ssh
-sudo touch /home/${USER}/.ssh/authorized_keys
-sudo chmod 666 -R /home/${USER}/.ssh/authorized_keys
-sudo echo ${PUB_KEY} >> /home/${USER}/.ssh/authorized_keys
-sudo chmod 400 -R /home/${USER}/.ssh/authorized_keys
-sudo chown ${USER}:${USER} -R /home/${USER}/.ssh
+sudo chown ubuntu:ubuntu -R /home/${USER}
+mkdir /home/${USER}/.ssh
+touch /home/${USER}/.ssh/authorized_keys
+chmod 666 -R /home/${USER}/.ssh/authorized_keys
+echo ${PUB_KEY} >> /home/${USER}/.ssh/authorized_keys
+chmod 400 -R /home/${USER}/.ssh/authorized_keys
+sudo chown ${USER}:${USER} -R /home/${USER}
