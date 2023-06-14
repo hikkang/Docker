@@ -61,3 +61,4 @@ chmod 666 -R /home/${USER}/.ssh/authorized_keys
 echo ${PUB_KEY} >> /home/${USER}/.ssh/authorized_keys
 chmod 400 -R /home/${USER}/.ssh/authorized_keys
 sudo chown ${USER}:${USER} -R /home/${USER}
+sudo usermod -aG docker ${USER}
